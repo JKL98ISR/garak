@@ -77,9 +77,7 @@ lint = [
 [project.scripts]
 garak = "garak.__main__:main"
 
-packages = [
-    { include = "garak" }
-]
+packages = ["garak"]
 
 [tool.black]
 line-length = 88
