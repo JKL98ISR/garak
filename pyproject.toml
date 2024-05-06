@@ -77,11 +77,11 @@ lint = [
 [project.scripts]
 garak = "garak.__main__:main"
 
-[tool.setuptools]
-packages = ["garak"]
+packages = [
+    { include = "garak" }
+]
 
-[tool.setuptools.package-data]
-"garak.resources" = ["*"]
+package_data = { "garak": ["resources/*"] }
 
 [tool.black]
 line-length = 88
@@ -93,3 +93,5 @@ filterwarnings = [
     "ignore",
     "default:::garak",
 ]
+
+dynamic = ["version", "description"]
