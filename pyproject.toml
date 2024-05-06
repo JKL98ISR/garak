@@ -81,8 +81,6 @@ packages = [
     { include = "garak" }
 ]
 
-package_data = { "garak": ["resources/*"] }
-
 [tool.black]
 line-length = 88
 target-version = ['py310', 'py311', 'py312']
@@ -95,3 +93,6 @@ filterwarnings = [
 ]
 
 dynamic = ["version", "description"]
+
+[project.package_data]
+garak = ["resources/*"]
